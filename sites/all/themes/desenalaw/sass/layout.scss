@@ -1,0 +1,106 @@
+.container {
+	@include container;
+}
+
+#page-wrapper {
+	overflow: hidden;
+	position: relative;
+}
+
+#navigation {
+	> .container {
+		padding: 0;
+	}
+}
+
+#header {
+	padding: 0 0 25px;
+	position: relative;
+
+	> .container {
+		position: relative;
+
+		> div {
+			text-align: center;
+		}
+	}
+}
+
+#content {
+	padding: 1em 0;
+
+	.front & {
+		padding: 0;
+	}
+
+	.not-front & {
+		background: $green;
+	}
+
+	.not-front.page-search & {
+		background: #fff;
+		color: $green;
+		padding-bottom: 0;
+	}
+
+	.page-node-24 & {
+		text-align: center;
+		padding-bottom: 3em;
+	}
+}
+
+#sidebar {
+	>div {
+		@include container;
+		max-width: 1440px;
+		padding: 0;
+	}
+}
+
+#widgets {
+	> div {
+		@include container;
+		max-width: 1440px;
+		padding: 0;
+	}
+}
+
+#widgets-left {
+}
+
+#widgets-right {
+	background-color: #404040;
+}
+
+#footer {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	> div {
+		@include container;
+		max-width: 1440px;
+	}
+}
+
+#footer-info {
+	color: #808080;
+	font-size: .625em;
+	margin: 15px 0;
+	overflow: auto;
+}
+
+#copyright {
+	float: left;
+}
+
+#site-by-cci {
+	float: right;
+
+	a {
+		color: #808080;
+		text-decoration: none;
+		&:hover {
+			color: $gold;
+		}
+	}
+}

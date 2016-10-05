@@ -1,0 +1,48 @@
+#page-wrapper {
+	min-width: 960px;
+}
+
+.container {
+	width: 960px;
+}
+
+#content {
+}
+
+#widgets {
+	width: 100%;
+	border-top: 3px solid #ffffff;
+}
+
+#widgets-left,
+#widgets-right {
+	float: left;
+
+	> div {
+		> div {
+			> div {
+			}
+		}
+	}
+}
+
+#widgets-left {
+	width: 50%;
+	padding: 0;
+
+	.view-content {
+	}
+}
+
+#widgets-right {
+	width: 50%;
+	padding: 0;
+
+	form {
+
+	}
+}
+
+#footer-info {
+	padding: 0 30px;
+}

@@ -1,0 +1,273 @@
+//slideshow
+.slide-text-wrapper {
+	ul {
+		li {
+			width: 32.3333%;
+			margin: .6777em 0;
+		}
+	}
+}
+
+//panels
+.panel {
+	height: 550px;
+	overflow: hidden;
+	width: 5%;
+	float: left;
+	position: relative;
+	transition: width .6s ease;
+
+	> div {
+		height: 550px;
+		display: table;
+		padding: 0;
+	}
+
+	h2 {
+		-moz-transform: rotate(-90deg);
+		-webkit-transform: rotate(-90deg);
+		transform: rotate(-90deg);
+		-webkit-transform-origin: left bottom;
+		transform-origin: left bottom;
+
+		position: absolute;
+		left: 50px;
+		bottom: 0;
+		width: 550px;
+		height: 44px;
+		text-align: right;
+		padding-left: 0;
+		padding-right: 200px;
+	}
+
+	.panel-content {
+		// max-height: none;
+		padding-left: 100px !important;
+		-moz-transition: none;
+		-webkit-transition: none;
+		transition: none;
+		display: table-cell;
+		vertical-align: middle;
+	}
+
+	h2:after {
+		content: "";
+		position: absolute;
+		top: 15px;
+		right: 150px;
+		background: url(../images/icon-panelarrowdown-2x.png) left center no-repeat;
+		background-size: 100%;
+		width: 18px;
+		height: 10px;
+	}
+
+	&.open {
+		h2:after {
+			content: "";
+			position: absolute;
+			top: 15px;
+			right: 150px;
+			background: url(../images/icon-panelarrowup-2x.png) left center no-repeat;
+			background-size: 100%;
+			width: 18px;
+			height: 10px;
+		}
+	}
+
+	&.open {
+		width: 80%;
+
+		h2 {
+		
+		}
+
+		.panel-content {
+			padding: 0 0 0 70px !important;
+			-moz-transition: none;
+			-webkit-transition: none;
+			transition: none;
+		}
+	}
+}
+
+.view-panels {
+
+	.views-row-1 .panel.open {
+
+	.panel-content {
+		background: url(../images/bg-litigation-2x.png) 95% 110% no-repeat;
+		background-size: 453px 378px;
+		}
+	}
+	.views-row-2 .panel.open {
+
+		.panel-content {
+			background: url(../images/bg-business-2x.png) 95% 110% no-repeat;
+			background-size: 392px 369px;
+		}
+	}
+	.views-row-3 .panel.open {
+		
+		.panel-content {
+			background: url(../images/bg-familylaw-2x.png) 90% 115% no-repeat;
+			background-size: 303px 457px;
+		}
+	}
+	.views-row-4 .panel.open {
+		
+		.panel-content {
+			background: url(../images/bg-estateplanning-2x.png) 95% 105% no-repeat;
+			background-size: 327px 432px;
+		}
+	}
+	.views-row-5 .panel.open {
+
+		.panel-content {
+			background: url(../images/bg-realestate-2x.png) right 105% no-repeat;
+			background-size: 425px 370px;
+		}
+	}
+
+	.views-row .panel h2:before {
+		-moz-transform: rotate(90deg);
+		-webkit-transform: rotate(90deg);
+		transform: rotate(90deg);
+	}
+
+	.views-row-1 .panel {
+
+		h2 {
+			&:before {
+				left: 205px;
+				top: 12px;
+			}
+		}
+	}
+	.views-row-2 .panel {
+
+		h2 {
+			&:before {
+				left: 220px;
+				top: 11px;
+			}
+		}
+	}
+	.views-row-3 .panel {
+
+		h2 {
+			&:before {
+				left: 200px;
+				top: 12px;
+			}
+		}
+	}
+	.views-row-4 .panel {
+
+		h2 {
+			&:before {
+				left: 145px;
+				top: 10px;
+			}
+		}
+	}
+	.views-row-5 .panel {
+
+		h2 {
+			&:before {
+				left: 190px;
+			}
+		}
+	}
+}
+
+//meet the staff
+.staff-content {
+	padding-left: 50px;
+}
+
+//widgets
+
+//map
+#contact-map {
+	position: relative;
+	height: 540px;
+}
+
+//contact info
+#block-views-contact-widget-block {
+	min-height: 540px;
+	position: relative;
+
+	> div.content {
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		right: 0;
+		left: 0;
+		height: 100%;
+
+		> div {
+			display: table;
+			width: 100%;
+			height: 100%;
+			max-width: 460px;
+			margin: 0 auto;
+
+			> div {
+				display: table-cell;
+				vertical-align: middle;
+			}
+		}
+	}
+
+	.view-content {
+		max-width: 371px;
+	}
+
+	.views-field-field-secondary-title {
+		
+	}
+
+	.views-field-body {
+		line-height: 1.5em;
+	}
+
+	.facebook-contact-link {
+	}
+}
+
+
+//contact form
+#block-webform-client-block-7 {
+	min-height: 540px;
+	position: relative;
+
+	> div.content {
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		right: 0;
+		left: 0;
+		height: 100%;
+
+		> form {
+			display: table;
+			width: 100%;
+			height: 100%;
+
+			> div {
+				display: table-cell;
+				vertical-align: middle;
+			}
+		}
+	}
+
+	form {
+		max-width: 370px;
+	}
+	input[type='text'],
+	input[type='email'],
+	textarea {
+		
+	}
+}

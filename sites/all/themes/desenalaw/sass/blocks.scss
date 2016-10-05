@@ -1,0 +1,623 @@
+//search bar
+.block-search {
+	position: absolute;
+	top: 11px;
+	right: 38px;
+	z-index: 3;
+
+	$tl: 0.4s; // transition length
+
+.form-text {
+	transition: width $tl, border-radius $tl, box-shadow $tl;
+	width: 33px;
+	height: 24px;
+	border-radius: 0;
+	border: none;
+	cursor: pointer;
+	background-image: url(../images/icon-search-2x.png);
+	background-repeat: no-repeat;
+	background-position: 95% 5%;
+	background-size: 24px 18px;
+	color: $green;
+	float: right;
+	padding: 0;
+	position: relative;
+	z-index: 21;
+
+	  & + label .search-icon {    
+	  	color: $green;
+	  }
+	  
+	  &:hover {
+	    color: $green;
+	    background-image: url(../images/icon-search-2x.png);
+	    background-repeat: no-repeat;
+	    background-position: 95% 5%;
+  		background-size: 24px 18px;
+	    & + label .search-icon {    
+	    	color: $green;
+	    }
+	  }
+
+	  &:focus {
+	    transition: width $tl cubic-bezier(0,1.08,.66,1.25), border-radius $tl, border-bottom $tl, background-color $tl;
+	    border: none;
+	    outline: none;
+	    box-shadow: none;
+	    padding-left: 5px;
+	    padding-right: 45px;
+	    cursor: text;
+	    width: 220px;
+	    border-radius: auto;
+	    // background-color: rgb(235, 235, 235);
+	    background-image: url(../images/icon-search-2x.png);
+	    background-repeat: no-repeat;
+	    background-position: 95% 5%;
+  		background-size: 24px 18px;
+  		border-bottom: 3px solid $green;
+	    color: $green;
+	    z-index: 19;
+	    & + label .search-icon {    
+	    	color: $green;   
+	    }
+	  }
+
+	  &:not(:focus) {    
+	  		text-indent:-5000px;
+	  		color: $green;
+	  	} // for more-graceful falling back (:not browsers likely support indent)
+	}
+
+	.form-submit {
+	  position: absolute;
+	  right: 0;
+	  // left: -5000px;
+	  color: $green;
+	  border: none;
+	  background: none;
+	  text-indent: -500px;
+	  width: 33px;
+	  height: 24px;
+	  padding: 0;
+	  z-index: 20;
+	  outline: none;
+	}
+
+	.search-icon {
+	  position: relative;
+	  left: -30px;
+	  color: $green;
+	  cursor: pointer;
+	}
+
+}
+
+//social media icons
+.facebook-link  a {
+	position: absolute;
+	left: 10px;
+	top: 13px;
+	z-index: 3;
+	&:before {
+		content: "";
+		position: absolute;
+		background: url(../images/icon-facebook-small-2x.png) center center no-repeat;
+		background-size: 100%;
+		width: 17px;
+		height: 17px;
+	}
+}
+
+.email-link a {
+	position: absolute;
+	left: 32px;
+	top: 13px;
+	z-index: 3;
+	&:before {
+		content: "";
+		position: absolute;
+		background: url(../images/icon-envelope-2x.png) center center no-repeat;
+		background-size: 100%;
+		width: 17px;
+		height: 17px;
+	}
+}
+
+//logo
+#logo {
+	img {
+		display: inline-block;
+	}
+}
+
+//slideshow
+.view-slideshow {
+	border-top: 1px solid #c6c6c6;
+	position: relative;
+
+	.views-row {
+		display: none;
+		&.active {
+			display: block;
+		}
+	}
+
+}
+
+.slide-wrapper {
+	position: relative;
+}
+
+.slide-text-wrapper {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	height: 100%;
+	background: url(../images/bg-slidetopshadow.png) top center repeat-x;
+
+	> div {
+		@include container;
+		height: 100%;
+		padding-left: 40px;
+		padding-right: 40px;
+
+		> div {
+			display: table;
+			height: 100%;
+
+			> div {
+				display: table-cell;
+				vertical-align: middle;
+				padding-top: 10px;
+			}
+		}
+	}
+
+	ul {
+		padding-left: 20px;
+		overflow: auto;
+		li {
+			float: left;
+			width: 50%;
+		}
+	}
+
+	.btn {
+		color: #fff;
+		border-color: #ffffff;
+		box-shadow: 1px 1px 1px rgba(black, .5);
+		text-shadow: 1px 1px 2px black;
+		position: relative;
+
+		&:before {
+			content: "";
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			box-shadow: inset 1px 1px 1px rgba(black, .5);
+		}
+
+		&:hover,
+		&:active,
+		&:focus {
+			background: rgba(255,255,255, .25);
+		}
+	}
+}
+
+.slide-title,
+.slide-body {
+	text-shadow: 1px 1px 1px black;
+	color: white;
+}
+
+.slide-title {
+	h2 {
+		color: white;
+		margin: 0;
+	}
+}
+
+#slide-arrow-left,
+#slide-arrow-right {
+	position: absolute;
+	top: 50%;
+	display: block;
+	z-index: 10;
+	margin-top: -12px;
+
+	img {
+		height: 24px;
+		width: 14px;
+	}
+}
+
+#slide-arrow-left {
+	left: 10px;
+}
+
+#slide-arrow-right {
+	right: 10px;
+}
+
+//banner
+
+.view-banner-image {
+	background: url(../images/bg-slidetopshadow.png) top center repeat-x;
+	border-top: 1px solid #c6c6c6;
+	border-bottom: 1px solid #fff;
+
+	img {
+		display: block;
+	}
+}
+
+//panels
+.panel {
+	overflow: hidden;
+
+	> div {
+		@include container;
+		padding-right: 0;
+	}
+
+	h2 {
+		position: relative;
+		color: #fff;
+		margin: 0;
+		padding: 10px 0 10px 30px;
+		cursor: pointer;
+		font-size: 20px;
+		line-height: 1em;
+		letter-spacing: -1px;
+
+		a {
+			color: #fff;
+		}
+	}
+
+	h2:after {
+		content: "";
+		position: absolute;
+		top: 15px;
+		right: 10px;
+		background: url(../images/icon-panelarrowdown-2x.png) left center no-repeat;
+		background-size: 100%;
+		width: 18px;
+		height: 10px;
+	}
+
+	&.open {
+		h2:after {
+			content: "";
+			position: absolute;
+			top: 15px;
+			right: 10px;
+			background: url(../images/icon-panelarrowup-2x.png) left center no-repeat;
+			background-size: 100%;
+			width: 18px;
+			height: 10px;
+		}
+	}
+
+	h3 {
+		font-size: 24px;
+		text-shadow: 1px 1px 1px black;
+		text-transform: uppercase;
+	}
+
+	p {
+		margin-bottom: 0;
+	}
+
+	.panel-content {
+		color: #fff;
+		max-height: 0;
+
+		*:first-child {
+			margin-top: 0;
+		}
+
+		* {
+			padding-right: 10px;
+		}
+	}
+
+	&.open {
+		.panel-content {
+			max-height: 2000px;
+			padding: 1em 0;
+			-moz-transition: max-height .6s ease, padding .6s ease;
+			-webkit-transition: max-height .6s ease, padding .6s ease;
+			transition: max-height .6s ease, padding .6s ease;
+		}
+	}
+}
+
+.view-panels {
+	
+	.views-row-1 .panel {
+		background: #30865a;
+
+		.panel-content {
+			background: url(../images/bg-litigation-2x.png) 115% 115% no-repeat;
+			background-size: 99px 83px;
+		}
+
+		h2 {
+			&:before {
+				content: "";
+				position: absolute;
+				top: 14px;
+				left: 0;
+				width: 18px;
+				height: 15px;
+				background: url(../images/icon-litigation-2x.png) center center no-repeat;
+				background-size: 100%;
+			}
+		}
+	}
+	.views-row-2 .panel {
+		background: #267a4f;
+
+		.panel-content {
+			background: url(../images/bg-business-2x.png) 125% 105% no-repeat;
+			background-size: 60%;
+		}
+
+		h2 {
+			&:before {
+				content: "";
+				position: absolute;
+				top: 14px;
+				left: 0;
+				width: 17px;
+				height: 16px;
+				background: url(../images/icon-business-2x.png) center center no-repeat;
+				background-size: 100%;
+			}
+		}
+	}
+	.views-row-3 .panel {
+		background: #1c6c43;
+
+		.panel-content {
+			background: url(../images/bg-familylaw-2x.png) 110% 93% no-repeat;
+			background-size: 30%;
+		}
+
+		h2 {
+			&:before {
+				content: "";
+				position: absolute;
+				top: 14px;
+				left: 0;
+				width: 14px;
+				height: 18px;
+				background: url(../images/icon-familylaw-2x.png) center center no-repeat;
+				background-size: 100%;
+			}
+		}
+	}
+	.views-row-4 .panel {
+		background: #135f38;
+
+		.panel-content {
+			background: url(../images/bg-estateplanning-2x.png) 110% 103% no-repeat;
+			background-size: 50%;
+		}
+
+		h2 {
+			&:before {
+				content: "";
+				position: absolute;
+				top: 8px;
+				left: 0;
+				width: 16px;
+				height: 21px;
+				background: url(../images/icon-estateplanning-2x.png) center center no-repeat;
+				background-size: 100%;
+			}
+		}
+	}
+	.views-row-5 .panel {
+		background: $green;
+		
+		.panel-content {
+			background: url(../images/bg-realestate-2x.png) 130% 105% no-repeat;
+			background-size: 70%;
+		}
+
+		h2 {
+			&:before {
+				content: "";
+				position: absolute;
+				top: 14px;
+				left: 0;
+				width: 18px;
+				height: 15px;
+				background: url(../images/icon-realestate-2x.png) center center no-repeat;
+				background-size: 100%;
+			}
+		}
+	}
+}
+
+//search
+.search-form {
+	display: none;
+}
+
+.page-search #content .node {
+	border-top: 1px solid #b3b3b3;
+	padding: 1em 0;
+}
+
+//meet the staff
+#block-views-meet-the-staff-block {
+	@include container;
+
+	> h2 {
+		font-size: 40px;
+	}
+}
+
+.view-meet-the-staff {
+	margin-bottom: 4em;
+	.staff-name {
+		h2 {
+			margin-bottom: 0;
+			text-transform: none;
+			line-height: 1em;
+		}
+	}
+
+	.staff-job {
+		h3 {
+			margin: 0;
+			color: $green;
+			text-transform: uppercase;
+		}
+	}
+
+	.staff-image {
+		img {
+			max-width: 230px;
+		}
+	}
+
+	.staff-content {
+	}
+
+	.views-row {
+		border-bottom: 1px solid #b3b3b3;
+		padding: 30px 0;
+		&.views-row-first {
+			border-top: 0;
+			padding-top: 0;
+		}
+	}
+}
+
+//map
+#contact-map {
+	position: relative;
+	height: 340px;
+
+	img {
+
+	}
+
+	.map-info {
+		color: $green;
+		font-size: 18px;
+		font-weight: bold;
+		text-align: center;
+	}
+}
+
+.gm-style-iw {
+   border-radius: 5px;
+   left: 24px !important;
+}
+
+//contact widget
+#block-views-contact-widget-block {
+	padding: 2em 1em;
+	color: $green;
+
+	.view-content {
+		max-width: 460px;
+		margin: 0 auto;
+	}
+
+	h1, h2 {
+		margin: 0;
+		line-height: .9em;
+		text-transform: uppercase;
+	}
+
+	.views-field-field-secondary-title {
+		margin-bottom: 2em;
+	}
+
+	.views-field-body {
+		line-height: 1.3em;
+	}
+
+	.facebook-contact-link {
+		position: relative;
+		padding-left: 35px;
+		line-height: 26px;
+		display: block;
+		&:before {
+			content: "";
+			background: url(../images/icon-facebook-large-2x.png) left center no-repeat;
+			width: 26px;
+			height: 26px;
+			background-size: 100%;
+			position: absolute;
+			left: 0;
+		}
+	}
+
+	.views-field-field-image {
+		margin-top: 1.5em;
+		img {
+			max-width: 160px;
+		}
+	}
+}
+
+//contact widget form
+#block-webform-client-block-7 {
+	padding: 2em 1em;
+	form {
+		margin: 0 auto;
+
+		.form-item:first-child {
+			margin-top: 0;
+		}
+	}
+
+	label {
+		color: #fff;
+	}
+
+	.form-radios {
+		.form-item {
+			display: inline-block;
+			margin-right: 10px;
+			margin-bottom: 0;
+		}
+	}
+
+	input[type="radio"] {
+	    position:absolute;
+	    clip: rect(0,0,0,0);
+	    clip: rect(0 0 0 0);
+	}
+	input[type="radio"] + label::before {
+	    content: url('../images/bg-checkbox-unchecked.png');
+	    padding-right: 9px;
+	    position: relative;
+	    top: 2px;
+	}
+
+	input[type="radio"]:checked + label::before {
+	    content: url('../images/bg-checkbox-checked.png');
+	}
+
+
+	input[type='text'],
+	input[type='email'],
+	textarea {
+		width: 100%;
+		border-radius: 2px;
+		border: 0;
+	}
+}

@@ -1,0 +1,146 @@
+.panel {
+  height: 550px;
+  overflow: hidden;
+  width: 5%;
+  float: left;
+  position: relative;
+  transition: width .6s ease; }
+  .panel > div {
+    height: 550px;
+    display: table;
+    padding: 0; }
+  .panel h2 {
+    -moz-transform: rotate(-90deg);
+    -webkit-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+    -webkit-transform-origin: left bottom;
+    transform-origin: left bottom;
+    position: absolute;
+    left: 50px;
+    bottom: 0;
+    width: 550px;
+    height: 44px;
+    text-align: right;
+    padding-left: 0;
+    padding-right: 200px; }
+  .panel .panel-content {
+    padding-left: 100px !important;
+    -moz-transition: none;
+    -webkit-transition: none;
+    transition: none;
+    display: table-cell;
+    vertical-align: middle; }
+  .panel h2:after {
+    content: "";
+    position: absolute;
+    top: 15px;
+    right: 150px;
+    background: url(../images/icon-panelarrowdown-2x.png) left center no-repeat;
+    background-size: 100%;
+    width: 18px;
+    height: 10px; }
+  .panel.open h2:after {
+    content: "";
+    position: absolute;
+    top: 15px;
+    right: 150px;
+    background: url(../images/icon-panelarrowup-2x.png) left center no-repeat;
+    background-size: 100%;
+    width: 18px;
+    height: 10px; }
+  .panel.open {
+    width: 80%; }
+    .panel.open .panel-content {
+      padding: 0 0 0 70px !important;
+      -moz-transition: none;
+      -webkit-transition: none;
+      transition: none; }
+
+.view-panels .views-row-1 .panel.open .panel-content {
+  background: url(../images/bg-litigation-2x.png) 95% 110% no-repeat;
+  background-size: 453px 378px; }
+.view-panels .views-row-2 .panel.open .panel-content {
+  background: url(../images/bg-business-2x.png) 95% 110% no-repeat;
+  background-size: 392px 369px; }
+.view-panels .views-row-3 .panel.open .panel-content {
+  background: url(../images/bg-familylaw-2x.png) 90% 115% no-repeat;
+  background-size: 303px 457px; }
+.view-panels .views-row-4 .panel.open .panel-content {
+  background: url(../images/bg-estateplanning-2x.png) 95% 105% no-repeat;
+  background-size: 327px 432px; }
+.view-panels .views-row-5 .panel.open .panel-content {
+  background: url(../images/bg-realestate-2x.png) right 105% no-repeat;
+  background-size: 425px 370px; }
+.view-panels .views-row .panel h2:before {
+  -moz-transform: rotate(90deg);
+  -webkit-transform: rotate(90deg);
+  transform: rotate(90deg); }
+.view-panels .views-row-1 .panel h2:before {
+  left: 205px;
+  top: 12px; }
+.view-panels .views-row-2 .panel h2:before {
+  left: 220px;
+  top: 11px; }
+.view-panels .views-row-3 .panel h2:before {
+  left: 200px;
+  top: 12px; }
+.view-panels .views-row-4 .panel h2:before {
+  left: 145px;
+  top: 10px; }
+.view-panels .views-row-5 .panel h2:before {
+  left: 190px; }
+
+.staff-content {
+  padding-left: 50px; }
+
+#contact-map {
+  position: relative;
+  height: 540px; }
+
+#block-views-contact-widget-block {
+  min-height: 540px;
+  position: relative; }
+  #block-views-contact-widget-block > div.content {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    height: 100%; }
+    #block-views-contact-widget-block > div.content > div {
+      display: table;
+      width: 100%;
+      height: 100%;
+      max-width: 460px;
+      margin: 0 auto; }
+      #block-views-contact-widget-block > div.content > div > div {
+        display: table-cell;
+        vertical-align: middle; }
+  #block-views-contact-widget-block .view-content {
+    max-width: 371px; }
+  #block-views-contact-widget-block .views-field-field-secondary-title {
+    margin-bottom: 3em; }
+  #block-views-contact-widget-block .views-field-body {
+    line-height: 1.5em; }
+  #block-views-contact-widget-block .facebook-contact-link {
+    margin-top: 3em; }
+
+#block-webform-client-block-7 {
+  min-height: 540px;
+  position: relative; }
+  #block-webform-client-block-7 > div.content {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    height: 100%; }
+    #block-webform-client-block-7 > div.content > form {
+      display: table;
+      width: 100%;
+      height: 100%; }
+      #block-webform-client-block-7 > div.content > form > div {
+        display: table-cell;
+        vertical-align: middle; }
+  #block-webform-client-block-7 form {
+    max-width: 370px; }
