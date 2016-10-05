@@ -217,9 +217,9 @@ $databases = array (
   array (
     'default' => 
     array (
-      'database' => 'desena_staging',
-      'username' => 'desena_staging',
-      'password' => 'dn{$AEP-H8X*',
+      'database' => 'desena',
+      'username' => 'root',
+      'password' => 'root',
       'host' => 'localhost',
       'port' => '',
       'driver' => 'mysql',
